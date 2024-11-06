@@ -3,13 +3,13 @@
 ## Overview
 This repository contains a custom implementation of a dynamic array in C++, similar to `std::vector`, using C-style arrays. The dynamic array supports basic operations such as inserting elements, accessing elements, and automatic resizing when the capacity is reached.
 
-We’ll also analyze the amortized runtime for inserting `n` elements into a dynamic array that doubles in size when needed, using two methods: the **aggregate method** and the **accounting method**. This analysis is based on concepts from Section 17.4 of *Introduction to Algorithms* by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
+This also analyzes the amortized runtime for inserting `n` elements into a dynamic array that doubles in size when needed, using two methods: the **aggregate method** and the **accounting method**. This analysis is based on concepts from Section 17.4 of *Introduction to Algorithms* by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
 
 ---
 
 ## Implementation
 
-Here’s the code for the dynamic array, which doubles in capacity when it becomes full.
+The code for the dynamic array is implemented in the `dynamic_table.cpp` file.
 
 ---
 
@@ -60,8 +60,3 @@ By charging 3 credits per insertion, we cover both the insertion and future resi
 
 ### Conclusion
 Using both the aggregate and accounting methods, we find that the amortized runtime per insertion in a dynamic array that doubles in size is \( O(1) \). This makes the dynamic array efficient for append operations, even though resizing occasionally requires copying elements.
-
----
-
-## License
-This project is licensed under the MIT License.
