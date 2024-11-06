@@ -31,13 +31,13 @@ The aggregate method involves calculating the total cost of `n` insertions and t
 
 The total cost \( T(n) \) for `n` insertions can be calculated as:
 \[
-T(n) = O(n) + O\left(\frac{n}{2}\right) + O\left(\frac{n}{4}\right) + \ldots + O(1)
+T(n) = O(n) + O(n/2) + O(n/4) + ... + O(1)
 \]
 This geometric series sums up to \( O(2n) \), simplifying to \( O(n) \).
 
 **Amortized Cost per Insertion**:
 \[
-\frac{T(n)}{n} = \frac{O(n)}{n} = O(1)
+Total cost / number of operations = O(n) / n = O(1)
 \]
 Therefore, the amortized runtime per insertion using the aggregate method is \( O(1) \).
 
